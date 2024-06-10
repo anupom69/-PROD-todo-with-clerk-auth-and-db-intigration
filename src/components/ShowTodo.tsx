@@ -5,6 +5,7 @@ import type { Todo } from "@prisma/client";
 import { deleteTodo, updateComplete } from "@/lib/actioins";
 import { useEffect, useState } from "react";
 import { useFormStatus } from "react-dom";
+import FormButton from "./form-submit-button";
 
 interface ShowTodoProps {
   todo: Todo;
@@ -32,9 +33,10 @@ export default function ShowTodo({ todo }: ShowTodoProps) {
         {todo.title}
       </Checkbox>
       <form action={deleteAction}>
-        <Button size="sm" variant="light" type="submit" isLoading={pending}>
+        <FormButton varient="light"><TrashIcon /></FormButton>
+        {/* <Button size="sm" variant="light" type="submit" isLoading={pending}>
           <TrashIcon />
-        </Button>
+        </Button> */}
       </form>
     </div>
   );
