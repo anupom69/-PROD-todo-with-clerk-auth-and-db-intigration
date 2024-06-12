@@ -25,7 +25,6 @@ export default function ShowTodo({ todo }: ShowTodoProps) {
   return (
     <div className="flex justify-between align-middle shadow-sm">
       <Checkbox
-        color="default"
         onChange={() => setCompleted((c) => !c)}
         size="lg"
         lineThrough

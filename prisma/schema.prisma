@@ -16,6 +16,7 @@ datasource db {
 model Todo {
   id        Int      @id @default(autoincrement())
   title     String
+  content   String?
   completed Boolean  @default(false)
   authorId  String?
   createdAt DateTime @default(now())

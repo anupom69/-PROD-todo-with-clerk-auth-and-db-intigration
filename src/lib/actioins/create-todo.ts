@@ -26,13 +26,13 @@ export async function createTask(
       errors: result.error.flatten().fieldErrors,
     };
   }
-  // if (!userId) {
-  //   return {
-  //     errors: {
-  //       _form: ["Log in to add task"],
-  //     },
-  //   };
-  // }
+  if (!userId) {
+    return {
+      errors: {
+        _form: ["Log in to add task"],
+      },
+    };
+  }
   try {
     await prisma.todo.create({
       data: {
