@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
-import { dark } from "@clerk/themes";
+// import { neobrutalism } from "@clerk/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider appearance={{ baseTheme: dark }}>
+    <ClerkProvider>
       <html lang="en" className="bg-gradient-to-tr from-black to-slate-900">
         <body className={`${inter.className}`}>
           <Providers>
